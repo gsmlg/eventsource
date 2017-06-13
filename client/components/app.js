@@ -2,28 +2,29 @@ import React, {Component} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Messages from './messages';
+import MessageForm from './message_form';
 import * as Actions from 'actions';
 
 class App extends Component {
   componentDidMount() {
     let {actions} = this.props;
+    let {update, add} = actions;
     this.evt = new EventSource('/messages');
     this.evt.addEventListener('update', (e) => {
-      console.log(e);
       let data = JSON.parse(e.data);
-      actions.update(data);
+      update(data);
     });
     this.evt.addEventListener('add', (e) => {
-      console.log(e);
-      let text = e.data;
-      actions.add(text);
+      let {text, time} = JSON.parse(e.data);
+      add(text, time);
     });
   }
 
   render() {
-    let {messages} = this.props;
+    let {messages, actions, form} = this.props;
     return (
       <div className="app-wrapper">
+        <MessageForm actions={actions} form={form} />
         <Messages messages={messages} />
       </div>
     );
@@ -31,6 +32,7 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
+  form: state.form,
   messages: state.messages
 });
 

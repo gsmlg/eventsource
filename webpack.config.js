@@ -116,7 +116,7 @@ module.exports = function() {
                 loader: "postcss-loader",
                 options: {
                   sourceMap: true,
-                  syntax: scssSyntaz,
+                  syntax: 'postcss-scss',
                   plugins: function() {
                     return [
                       autoprefixer({
@@ -211,7 +211,7 @@ module.exports = function() {
         NODE_ENV: 'production'
       }),
       new webpack.HotModuleReplacementPlugin(),
-      new UglifyJSPlugin({
+      /*new UglifyJSPlugin({
         compress: {
           dead_code: true,
           warnings: false,
@@ -226,7 +226,7 @@ module.exports = function() {
         output: {
           screw_ie8: false,
         },
-      }),
+      }),*/
     ]
   };
 };
