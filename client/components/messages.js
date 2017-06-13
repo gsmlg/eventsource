@@ -5,10 +5,9 @@ export default class Messages extends Component {
     let {messages} = this.props;
     return (
       <ul>
-        {messages.map(msg => {
+        {messages.map((msg, n) => {
           return (
-            <li >
-              <time datetime={msg.time}>{msg.time}</time>
+            <li key={n}>
               {msg.text}
             </li>
           );

@@ -1,16 +1,16 @@
-export const UPDATE_MSG = 'UP_MSG';
+import {ADD_MSG, UPDATE_MSG} from 'constants/action_types';
 
-export function add(msg, time = new Date()) {
+export function add(text, time = new Date()) {
   return {
     type: ADD_MSG,
-    message: msg,
+    text: text,
     time: time
   };
 }
 
-export function upate(msgs) {
+export function update(messages) {
   return {
     type: UPDATE_MSG,
-    messages: msgs
+    messages: messages
   };
 }
