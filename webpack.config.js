@@ -12,7 +12,7 @@ var scssSyntaz = require('postcss-scss');
 module.exports = function() {
   return {
     entry: {
-      hot: 'webpack-hot-middleware/client',
+      hot: 'webpack-hot-middleware/client?reload=true',
       app: client + '/index.js'
     },
     module: {

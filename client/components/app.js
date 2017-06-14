@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Messages from './messages';
 import MessageForm from './message_form';
+import Ifconfig from './ifconfig';
 import * as Actions from 'actions';
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
     let {messages, actions, form} = this.props;
     return (
       <div className="app-wrapper">
+        <Ifconfig />
         <MessageForm actions={actions} form={form} />
         <Messages messages={messages} />
       </div>

@@ -9,3 +9,5 @@ export const POST = 'post';
 export const POST_DONE = 'post-done';
 
 export const POST_ERROR = 'post-error';
+
+export const UPDATE_IFCFG = 'udpate-ifcfg';

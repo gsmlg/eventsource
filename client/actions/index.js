@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import {ADD_MSG, UPDATE_MSG, INPUT_TEXT, POST, POST_DONE, POST_ERROR} from 'constants/action_types';
+import {ADD_MSG, UPDATE_MSG, INPUT_TEXT, POST, POST_DONE, POST_ERROR, UPDATE_IFCFG} from 'constants/action_types';
 
 export function add(text, time = new Date()) {
   return {
@@ -39,5 +39,12 @@ export function postDone() {
 export function postFail() {
   return {
     type: POST_ERROR
+  };
+}
+
+export function updateIfcfg(ifconfig) {
+  return {
+    type: UPDATE_IFCFG,
+    ifconfig: ifconfig
   };
 }

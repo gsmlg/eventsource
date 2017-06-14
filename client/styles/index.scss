@@ -6,6 +6,14 @@ htmk, body {
   #app {
     .app-wrapper {
 
+      .ifconfig {
+        margin: 1em auto;
+        width: 800px;
+        padding: 1em;
+        background-color: #000;
+        color: #fff;
+      }
+
       .message-form {
         margin: 1em auto;
         width: 800px;
