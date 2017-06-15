@@ -2893,6 +2893,10 @@ osenv@0, osenv@^0.1.4:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
 
+osx-temperature-sensor@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/osx-temperature-sensor/-/osx-temperature-sensor-1.0.1.tgz#a37eabeb79a2a01ec4bad11a7888fd0ccd95c080"
+
 pako@~0.2.0:
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/pako/-/pako-0.2.9.tgz#f3f7522f4ef782348da8161bad9ecfd51bf83a75"
@@ -3943,6 +3947,12 @@ svgo@^0.7.0:
 symbol-observable@^1.0.2:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
+
+systeminformation@^3.19.0:
+  version "3.19.0"
+  resolved "https://registry.yarnpkg.com/systeminformation/-/systeminformation-3.19.0.tgz#415c0249d5cc9bc1afdec09529c02d5bbe476a80"
+  optionalDependencies:
+    osx-temperature-sensor "^1.0.0"
 
 tapable@^0.2.5, tapable@~0.2.5:
   version "0.2.6"
