@@ -1,0 +1,54 @@
+$fa-font-path: '~font-awesome/fonts';
+@import '~font-awesome/scss/font-awesome';
+
+htmk, body {
+  background-color: #ace;
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  #app {
+    .app-wrapper {
+
+      .ping {
+        margin: 1em auto;
+        min-width: 800px;
+        padding: 1em;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .host {
+          display: flex;
+          flex-wrap: wrap;
+          align-content: space-between;
+
+          &.host-title {
+            font-weight: bold;
+          }
+
+          span {
+            &.col-host {
+              flex: 0 0 25%;
+            }
+            flex: 1;
+          }
+        }
+      }
+
+      .chart {
+        height: 480px;
+
+        .chart-container {
+          height: 480px;
+
+        }
+      }
+
+    }
+  }
+}
