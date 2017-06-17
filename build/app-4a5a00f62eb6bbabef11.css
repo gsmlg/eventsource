@@ -1,0 +1,26 @@
+htmk, body {
+  background-color: #ace;
+  min-height: 100%;
+  width: 100%; }
+  htmk #app .app-wrapper .message-form, body #app .app-wrapper .message-form {
+    margin: 1em auto;
+    width: 800px; }
+  htmk #app .app-wrapper .messages-list, body #app .app-wrapper .messages-list {
+    min-height: 400px;
+    margin: 0 auto;
+    padding: 0;
+    width: 800px;
+    border: 1px solid #333; }
+    htmk #app .app-wrapper .messages-list .message-item, body #app .app-wrapper .messages-list .message-item {
+      list-style: none;
+      border-bottom: 1px solid #333; }
+      htmk #app .app-wrapper .messages-list .message-item time, body #app .app-wrapper .messages-list .message-item time {
+        color: #999;
+        margin-right: 1em;
+        display: inline-block;
+        vertical-align: middle; }
+      htmk #app .app-wrapper .messages-list .message-item .text, body #app .app-wrapper .messages-list .message-item .text {
+        display: inline-block;
+        vertical-align: middle; }
+
+/*# sourceMappingURL=app-4a5a00f62eb6bbabef11.css.map*/

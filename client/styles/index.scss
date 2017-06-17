@@ -1,42 +1,29 @@
-htmk, body {
-  background-color: #ace;
+@import 'bootstrap/scss/bootstrap';
+
+#wrapper {
+  margin: 0;
+  border: 0;
+  padding: 0;
   min-height: 100%;
   width: 100%;
+}
+
+html, body {
+  background-color: #ace;
+  @extend #wrapper;
 
   #app {
-    .app-wrapper {
+    @extend #wrapper;
 
-      .message-form {
-        margin: 1em auto;
-        width: 800px;
-      }
-
-
-      .messages-list {
-        min-height: 400px;
-        margin: 0 auto;
-        padding: 0;
-        width: 800px;
-        border: 1px solid #333;
-
-        .message-item {
-          list-style: none;
-          border-bottom: 1px solid #333;
-
-          time {
-            color: #999;
-            margin-right: 1em;
-            display:inline-block;
-            vertical-align: middle;
-          }
-
-          .text {
-            display:inline-block;
-            vertical-align: middle;
-          }
-
+    .system-info, .status-info {
+      > .module {
+        > .module-inner {
+          padding: 1em;
+          margin: 1em;
+          border: 1px solid #000;
         }
       }
     }
+
   }
 }

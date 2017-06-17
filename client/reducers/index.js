@@ -1,6 +1,8 @@
 import {combineReducers} from "redux";
-import pid from './pid';
+import system from './system';
+import status from './status';
 
 export default combineReducers({
-  pid
+  system,
+  status
 });

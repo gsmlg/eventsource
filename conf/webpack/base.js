@@ -44,9 +44,6 @@ class WebpackBaseConfig {
     return {
       context: this.srcPathAbsolute,
       devtool: 'eval',
-      entry: {
-        app: 'index'
-      },
       module: {
         rules: [
           {
@@ -90,12 +87,6 @@ class WebpackBaseConfig {
                   loader: 'css-loader'
                 },
                 {
-                  loader: 'resolve-url-loader',
-                  options: {
-                    debug: false
-                  }
-                },
-                {
                   loader: 'postcss-loader',
                   options: {
                     syntax: 'postcss-scss',
@@ -121,9 +112,6 @@ class WebpackBaseConfig {
               use: [
                 {
                   loader: 'css-loader'
-                },
-                {
-                  loader: 'resolve-url-loader'
                 },
                 {
                   loader: 'postcss-loader',

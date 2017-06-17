@@ -4,17 +4,22 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "start": "node server"
+    "start": "NODE_ENV=development node server",
+    "server": "NODE_ENV=production node server",
+    "build": "NODE_ENV=production webpack"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
+    "bootstrap": "4.0.0-alpha.6",
     "express": "^4.15.3",
     "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.5",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "systeminformation": "^3.20.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",

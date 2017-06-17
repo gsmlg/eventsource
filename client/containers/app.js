@@ -1,15 +1,20 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-// import CPU from './cpu';
-// import Mem from './mem';
-// import Disk from './disk';
-import PID from './pid';
+
+import System from'./system';
+import Status from'./status';
 
 class App extends Component {
+
   render() {
     return (
-      <div className="app-wrapper">
-        <PID />
+      <div className="container-fluid">
+        <div className="container">
+        </div>
+        <div className="container-fluid">
+          <System />
+          <Status />
+        </div>
       </div>
     );
   }

@@ -14,20 +14,17 @@ class WebpackDistConfig extends WebpackBaseConfig {
     this.config = {
       cache: false,
       devtool: 'source-map',
-      entry: [
-        './client.js'
-      ],
+      entry: {
+        app: 'index'
+      },
       plugins: [
         new webpack.DefinePlugin({
           'process.env.NODE_ENV': JSON.stringify('production')
         }),
-        new webpack.optimize.UglifyJSPlugin(),
+        new webpack.optimize.UglifyJsPlugin(),
         new webpack.NoEmitOnErrorsPlugin()
       ]
     };
-
-    // Deactivate hot-reloading if we run dist build on the dev server
-    this.config.devServer.hot = false;
   }
 
   /**

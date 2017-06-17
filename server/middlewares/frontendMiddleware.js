@@ -8,7 +8,7 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 
 const Config = require('../../webpack.config');
-const webpackConfig = Config();
+const webpackConfig = Config;
 
 // Dev middleware
 const addDevMiddlewares = (app, webpackConfig) => {
@@ -35,15 +35,14 @@ const addDevMiddlewares = (app, webpackConfig) => {
 // Production middlewares
 const addProdMiddlewares = (app, options) => {
   const publicPath = options.publicPath || '/';
-  const outputPath = options.outputPath || path.resolve(process.cwd(), 'build');
+  const outputPath = options.outputPath;
 
   // compression middleware compresses your server responses which makes them
   // smaller (applies also to assets). You can read more about that technique
   // and other good practices on official Express.js docs http://mxs.is/googmy
-  app.use(compression());
   app.use(publicPath, express.static(outputPath));
 
-  app.get('*', (req, res) => res.sendFile(path.resolve(outputPath, 'index.html')));
+  app.get('/', (req, res) => res.sendFile(path.resolve(outputPath, 'index.html')));
 };
 
 /**

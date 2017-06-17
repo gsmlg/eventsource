@@ -1,1 +1,3 @@
-export const SHOW_PID = 'show-pid';
+export const SET_SYSTEM = 'SYSTEM';
+
+export const SET_STATUS = 'STATUS';

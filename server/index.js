@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-require('./pid')(app);
+require('./systeminformation')(app);
 
 setup(app, {});
 

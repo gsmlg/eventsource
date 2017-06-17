@@ -1,4 +1,5 @@
 'use strict';
+var path = require('path');
 
 /**
  * Default dev server configuration.
@@ -13,9 +14,15 @@ class WebpackDevConfig extends WebpackBaseConfig {
     this.config = {
       devtool: 'cheap-module-source-map',
       entry: {
-        es: 'eventsource-polyfill',
+        // es: 'eventsource-polyfill',
         hot: 'webpack-hot-middleware/client?reload=true',
-        app: 'client'
+        app: 'index'
+      },
+      output: {
+        path: path.join(this.appRoot, 'build'),
+        filename: '[name].js',
+        chunkFilename: '[name].js',
+        publicPath: '/'
       },
       plugins: [
         new webpack.HotModuleReplacementPlugin(),

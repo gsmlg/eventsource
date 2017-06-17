@@ -1,9 +1,15 @@
-import $ from 'jquery';
-import {SHOW_PID} from 'constants/action_types';
+import {SET_SYSTEM, SET_STATUS} from 'constants/action_types';
 
-export const showPIDs = (pid) => {
+export const setSystem = (system) => {
   return {
-    type: SHOW_PID,
-    pid: pid
+    type: SET_SYSTEM,
+    system: system
+  };
+};
+
+export const setStatus = (status) => {
+  return {
+    type: SET_STATUS,
+    status: status
   };
 };
