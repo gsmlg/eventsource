@@ -16,10 +16,32 @@ class Status extends Component {
       })
       .then(data => {
         setStatus(data);
+        this.loadInterval();
       });
   }
 
   componentWillUnmount() {
+    clearTimeout(this.tid);
+    this.tid = null;
+  }
+
+  loadInterval() {
+    this.tid = setTimeout((t) => {
+      fetch('/systeminformation/getDynamicData')
+        .then(res => {
+          return res.json();
+        })
+        .then(data => {
+          setStatus(data);
+          if (this.tid == null) {
+            throw 'died';
+          }
+          return null;
+        })
+        .then(() => {
+          this.loadInterval();
+        });
+    }, 5000);
   }
 
   showHash(hash) {
