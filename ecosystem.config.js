@@ -1,3 +1,11 @@
+let args = process.argv;
+
+let watch = ["server", "conf"];
+
+if (args.includes('production')) {
+  watch = false;
+}
+
 module.exports = {
   /**
    * Application configuration section
@@ -9,16 +17,18 @@ module.exports = {
     {
       name      : 'monitor',
       script    : 'server/index.js',
-      "watch": ["server", "conf"],
+      "watch": watch,
       "ignore_watch" : ["node_modules"],
       "watch_options": {
         "followSymlinks": false
       },
       env: {
+        APP_PORT: 3000,
         NODE_ENV: 'development',
         COMMON_VARIABLE: 'true'
       },
       env_production : {
+        APP_PORT: 10251,
         NODE_ENV: 'production'
       }
     },
