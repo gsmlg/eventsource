@@ -1,8 +1,6 @@
 import {combineReducers} from "redux";
-import messages from './messages';
-import form from './form';
+import pid from './pid';
 
 export default combineReducers({
-  form,
-  messages
+  pid
 });
