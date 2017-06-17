@@ -27,8 +27,8 @@ class System extends Component {
     return map(hash, (val, key) => {
       return (
         <div key={key} className="row">
-          {isArr ? null : <div className="col-3">{key}</div>}
-          <div className={isArr ? "col-12" : "col-9"}>{isObjectLike(val) ? this.showHash(val) : String(val)}</div>
+          {isArr ? <div className="col-1"> - </div> : <div className="col-3">{key}</div>}
+          <div className={isArr ? "col-11" : "col-9"}>{isObjectLike(val) ? this.showHash(val) : String(val)}</div>
         </div>
       );
     });
